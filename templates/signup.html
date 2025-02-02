@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}
+Sign-up 🌿
+{% endblock title %}
+<style>
+.centertext{
+    text-align: center;
+    margin-top: 50px;
+}
+.centertext input{
+    margin:10px 0;
+    width:300px;
+    padding: 10px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}body, html {
+    height: 100%; 
+    margin: 0;
+    display: flex;
+    align-items: center; /* Centers the form vertically */
+    justify-content: center; /* Centers the form horizontally */
+}
+</style>
+{% block content %}
+
+
+<div class="centertext">
+    {% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+    <ul>
+        {% for category,message in messages %}
+        <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    <h3 style="text-align:center">Signup</h3> 
+<form action="/signup" method="POST">
+<label>Username:</label>
+<input type="username" name="username" placeholder="Email"><br>
+<label>Password:</label>
+<input type = "password" name="password1" placeholder="Password"><br>
+<label>Confirm Password:</label>
+<input type = "password" name="password2" placeholder="Password"><br>
+<button type="submit">Login</button>
+</form>
+<h3>Already have an account? 🙂</h3><a href="/login">Log-in 🪴</a>
+</div>
+
+{% endblock content %}

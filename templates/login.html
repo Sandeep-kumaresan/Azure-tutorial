@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+Log-in 🪴
+{% endblock title %}
+
+{% block content %}
+
+
+
+<div class="centertext">
+    {% with messages = get_flashed_messages(with_categories=True) %}
+{% if messages %}
+    <ul>
+        {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+{% endwith %}
+    <h3 style="text-align:center; margin-bottom:20px;">Login</h3>
+    <form action="/login" method="POST">
+        <label>Username:</label>
+        <input type="text" name="username" placeholder="Email"><br>
+        <label>Password:</label>
+        <input type="password" name="password" placeholder="Password"><br>
+        <button type="submit">Login</button>
+        <h4 style="text-align: center;">Are You a New User? 😶</h4><a href="/signup">Signup 🌿</a>
+        
+    </form>
+</div>
+
+{% endblock content %}

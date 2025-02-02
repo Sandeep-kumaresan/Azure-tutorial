@@ -1,0 +1,73 @@
+
+/* Centering styles */
+body, html {
+    height: 100%; 
+    margin: 0;
+    display: flex;
+    align-items: center; /* Centers the form vertically */
+    justify-content: center; /* Centers the form horizontally */
+    color:white;
+    background-color:black ;
+}
+
+/* Centered form styling */
+.centertext {
+    text-align: center;
+    margin-top: 50px;
+}
+.centertext input {
+    margin: 10px 0;
+    width: 300px;
+    padding: 10px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+form label {
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: left;
+}
+
+/* Flash message styles */
+li {
+    list-style: none;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+li.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+li.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+li.warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+li.info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+a{
+    color:whitesmoke
+}
